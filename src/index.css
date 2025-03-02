@@ -1,0 +1,294 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  background: #f5f5f5;
+}
+
+/* ======= App Layout ======= */
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.section-2 {
+  flex: 1;
+}
+
+/* ======= Navbar Styles ======= */
+.navbar {
+  background: linear-gradient(180deg, rgb(194, 204, 211) 0%, rgba(255, 255, 255, 1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-links,
+.navbar .main-links {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.active {
+  color: rgb(86, 94, 248);
+  border-bottom: 2px solid gray;
+}
+
+/* ======= Responsive Navbar ======= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar .nav-links,
+  .navbar .main-links {
+    display: none;
+  }
+}
+
+#nav-logo > img {
+  height: 70px;
+  margin-left: 20px;
+}
+
+/* ======= Collaborator Section ======= */
+#collaborators {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ======= Collaborator Card ======= */
+#card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#card:hover {
+  transform: scale(1.05);
+}
+
+/* Avatar */
+#avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Typography */
+#p1 {
+  color: rgb(181, 83, 181);
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+#p3 {
+  color: rgb(64, 18, 64);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#p2 {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+#button1,
+#button {
+  margin: 5px;
+  padding: 6px 14px;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#button1 {
+  color: gray;
+  background: #f3f3f3;
+}
+
+#button1:hover {
+  background: #ddd;
+}
+
+#button {
+  color: rgb(105, 40, 197);
+  background: transparent;
+  border: 1px solid rgb(105, 40, 197);
+}
+
+#button:hover {
+  background: rgb(105, 40, 197);
+  color: white;
+}
+
+/* ======= Share Your Ideas Section ======= */
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Input & Button Container */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button,
+.login-button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button:hover,
+.login-button:hover {
+  background: #0056b3;
+}
+
+/* ======= Idea Card Styles ======= */
+.ideas-container {
+  margin-top: 20px;
+}
+
+.idea-card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Buttons for Edit & Delete */
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background: #ffc107;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-button:hover {
+  background: #e0a800;
+}
+
+.delete-button {
+  background: #dc3545;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+/* Edit Input */
+.edit-input {
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Save Button */
+.save-button {
+  background: #28a745;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.save-button:hover {
+  background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #collaborators {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #card {
+    width: 90%;
+  }
+}
